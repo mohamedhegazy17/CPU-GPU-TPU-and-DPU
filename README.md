@@ -79,11 +79,9 @@ graph TD
 
 ### Graph: Performance vs Specialization
 ```mermaid
-line
-    title Performance vs Specialization
-    axisX Specialization -->
-    axisY Performance -->
-    "CPU": (0.2, 0.4)
-    "GPU": (0.6, 0.8)
-    "TPU": (0.8, 1.0)
-    "DPU": (0.7, 0.9)
+graph TD
+    Specialization[Specialization Level] --> CPU[CPU: Low Performance, Low Specialization]
+    Specialization --> GPU[GPU: Medium Performance, High Specialization]
+    Specialization --> TPU[TPU: High Performance, High Specialization]
+    Specialization --> DPU[DPU: High Performance, Medium Specialization]
+
