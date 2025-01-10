@@ -64,15 +64,15 @@ G[DPU] -->|Data Tasks| H[Networking/Storage/Security]
 
 ### Diagram 2: Use Case Overlap
 ```mermaid
-venn
-    title Use Cases of CPU, GPU, TPU, DPU
-    A[CPU]
-    B[GPU]
-    C[TPU]
-    D[DPU]
-    AB[Everyday computing and graphics]
-    BC[Machine learning]
-    CD[Cloud data processing]
+graph TD
+    CPU[CPU] -->|Overlaps| Everyday[Everyday Computing and Graphics]
+    GPU[GPU] -->|Overlaps| Everyday
+    GPU -->|Overlaps| ML[Machine Learning]
+    TPU[TPU] -->|Overlaps| ML
+    TPU -->|Overlaps| AI[AI Acceleration]
+    DPU[DPU] -->|Overlaps| Data[Cloud Data Processing]
+    TPU -->|Overlaps| Data
+
 ```
 
 ---
